@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Category Details</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadCategoryPage()">
+
+<div class="dashboard">
+
+    <h1>Category Details</h1>
+
+    <div class="stats">
+
+        <div class="card">
+            <h3>Total Items</h3>
+            <p id="categoryTotal">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Expired Items</h3>
+            <p id="categoryExpired">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Expiring Soon</h3>
+            <p id="categoryExpiring">0</p>
+        </div>
+
+    </div>
+
+    <div class="form-container">
+
+        <h2>Add Item</h2>
+
+        <input type="text"
+               id="itemName"
+               placeholder="Item Name">
+
+        <div class="quantity-section">
+
+            <input type="number"
+                   id="quantity"
+                   placeholder="Quantity">
+
+            <select id="unit">
+
+                <option value="Kg">Kg</option>
+
+                <option value="Grams">Grams</option>
+
+                <option value="Liters">Liters</option>
+
+                <option value="Packet">Packet</option>
+
+                <option value="Pieces">Pieces</option>
+
+            </select>
+
+        </div>
+
+        <input type="date"
+               id="expiryDate">
+
+        <button onclick="addItem()">
+            Add Item
+        </button>
+
+    </div>
+
+    <h2>Items</h2>
+
+    <div id="itemsList"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

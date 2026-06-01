@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadDashboard()">
+
+<div class="dashboard">
+
+    <div class="top-bar">
+
+        <h1>Dashboard</h1>
+
+        <div id="profileBox"></div>
+
+    </div>
+
+    <div class="notification-section">
+        <h3>Notifications</h3>
+        <div id="notifications"></div>
+    </div>
+
+    <div class="stats">
+
+        <div class="card">
+            <h3>Total Items</h3>
+            <p id="totalItems"
+            onclick="showTotalItems()"
+            style="cursor:pointer;">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Expired Items</h3>
+            <p id="expiredItems"
+   onclick="showExpiredItems()"
+   style="cursor:pointer;">
+   0
+</p>
+        </div>
+
+        <div class="card">
+            <h3>Expiring Soon</h3>
+            <p id="expiringSoon"
+            onclick="showExpiringItems()"
+            style="cursor:pointer">0</p>
+        </div>
+
+    </div>
+
+    <div class="category-section">
+
+        <h2>Categories</h2>
+
+        <input type="text"
+               id="categoryName"
+               placeholder="Add Category">
+
+        <button onclick="addCategory()">
+            Add Category
+        </button>
+
+        <div id="categories"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
